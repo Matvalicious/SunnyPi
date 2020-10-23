@@ -48,12 +48,6 @@ try:
 
     while True: 
 
-        #loading_draw = ImageDraw.Draw(loading_image)
-        #loading_draw.text((0, 20), "Navigating to Login Page...", font = font15, fill = 0)
-        #loading_image = loading_image.transpose(Image.ROTATE_180)
-        #epd.displayPartial(epd.getbuffer(loading_image))
-        #loading_image = loading_image.transpose(Image.ROTATE_180)
-
         print("Navigating to Login Page...")      
         driver.get(LOGINURL)
         email_element = driver.find_element_by_id("txtUserName")
@@ -61,22 +55,10 @@ try:
         checkbox_element = driver.find_element_by_id("ctl00_ContentPlaceHolder1_Logincontrol1_MemorizePassword")
         login_element = driver.find_element_by_id("ctl00_ContentPlaceHolder1_Logincontrol1_LoginBtn")
 
-        #loading_draw = ImageDraw.Draw(loading_image)
-        #loading_draw.text((0, 40), "Entering Login Credentials...", font = font15, fill = 0)
-        #loading_image = loading_image.transpose(Image.ROTATE_180)
-        #epd.displayPartial(epd.getbuffer(loading_image))
-        #loading_image = loading_image.transpose(Image.ROTATE_180)
-
         print("Entering Login Credentials...")
         email_element.send_keys("youremail@address.com")
         password_element.send_keys("yourpassword")
         checkbox_element.click()
-
-        #loading_draw = ImageDraw.Draw(loading_image)
-        #loading_draw.text((0, 60), "Navigating to Dashboard...", font = font15, fill = 0)
-        #loading_image = loading_image.transpose(Image.ROTATE_180)
-        #epd.displayPartial(epd.getbuffer(loading_image))
-        #loading_image = loading_image.transpose(Image.ROTATE_180)
 
         print("Navigating to Dashboard...")
         login_element.click()
@@ -84,12 +66,6 @@ try:
         refreshcounter = 0
         relogincounter = 0
         keepActive = True
-
-        #loading_draw = ImageDraw.Draw(loading_image)
-        #loading_draw.text((0, 80), "Loading Dashboard...", font = font15, fill = 0)
-        #loading_image = loading_image.transpose(Image.ROTATE_180)
-        #epd.displayPartial(epd.getbuffer(loading_image))
-        #loading_image = loading_image.transpose(Image.ROTATE_180)
 
         epd.init(epd.FULL_UPDATE)
         epd.display(epd.getbuffer(refresh_image))
