@@ -1,5 +1,5 @@
 # SunnyPi
-Display the SMA Sunny Portal on a Raspberry Pi e-ink display
+Display the SMA Sunny Portal on a Raspberry Pi Waveshare 2.13 inch e-ink display. If you need this to work on other screens, head over to Waveshare's Github page and download the correct scripts for your model.
 
 Run the script with python3 SunnyPi.py
 
